@@ -1,0 +1,6 @@
+{
+  "threshold": 0.03,
+  "validation_cost": 10610.0,
+  "cost_fp": 5.0,
+  "cost_fn": "montant de la fraude non bloqu\u00e9e"
+}

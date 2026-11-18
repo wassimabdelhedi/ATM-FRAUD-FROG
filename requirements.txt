@@ -1,7 +1,0 @@
-pandas
-numpy
-scikit-learn
-skl2onnx
-onnxruntime
-matplotlib
-joblib

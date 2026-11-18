@@ -1,0 +1,24 @@
+{
+  "node_id": "fog_c",
+  "host": "0.0.0.0",
+  "port": 8003,
+  "description": "PC 3 -- Noeud Fog C : Coordinateur & Decision Finale",
+  "security": {
+    "jwt_secret": "fog_atm_mesh_secret_2024_bancaire",
+    "ca_cert": "../certs/ca.crt",
+    "node_cert": "../certs/fog_c.crt",
+    "node_key": "../certs/fog_c.key"
+  },
+  "peers": {
+    "fog_a_url": "https://127.0.0.1:8001",
+    "fog_b_url": "https://127.0.0.1:8002"
+  },
+  "resilience": {
+    "sync_interval_s": 30,
+    "peer_timeout_s": 5.0
+  },
+  "thresholds": {
+    "behavior_score": 0.03,
+    "max_speed_kmh": 130.0
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "node_id": "fog_a",
+  "host": "0.0.0.0",
+  "port": 8001,
+  "description": "PC 1 -- Noeud Fog A : Analyse Comportementale IA",
+  "security": {
+    "jwt_secret": "fog_atm_mesh_secret_2024_bancaire",
+    "ca_cert": "../certs/ca.crt",
+    "node_cert": "../certs/fog_a.crt",
+    "node_key": "../certs/fog_a.key"
+  },
+  "peers": {
+    "fog_b_url": "https://127.0.0.1:8002",
+    "fog_c_url": "https://127.0.0.1:8003"
+  },
+  "resilience": {
+    "sync_interval_s": 30,
+    "peer_timeout_s": 5.0
+  },
+  "thresholds": {
+    "behavior_score": 0.03,
+    "max_speed_kmh": 130.0,
+    "min_distance_km": 5.0
+  }
+}

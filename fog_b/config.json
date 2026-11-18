@@ -1,0 +1,24 @@
+{
+  "node_id": "fog_b",
+  "host": "0.0.0.0",
+  "port": 8002,
+  "description": "PC 2 -- Noeud Fog B : Analyse Spatio-Temporelle",
+  "security": {
+    "jwt_secret": "fog_atm_mesh_secret_2024_bancaire",
+    "ca_cert": "../certs/ca.crt",
+    "node_cert": "../certs/fog_b.crt",
+    "node_key": "../certs/fog_b.key"
+  },
+  "peers": {
+    "fog_a_url": "https://127.0.0.1:8001",
+    "fog_c_url": "https://127.0.0.1:8003"
+  },
+  "resilience": {
+    "sync_interval_s": 30,
+    "peer_timeout_s": 5.0
+  },
+  "thresholds": {
+    "max_speed_kmh": 130.0,
+    "min_distance_km": 5.0
+  }
+}

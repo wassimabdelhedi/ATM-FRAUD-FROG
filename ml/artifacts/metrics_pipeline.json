@@ -1,0 +1,79 @@
+{
+  "features_version": "v2",
+  "thresholds": {
+    "behavior_score": 0.03,
+    "max_speed_kmh": 130.0,
+    "min_distance_km": 20.0
+  },
+  "fog_a_only": {
+    "precision": 0.253,
+    "recall": 0.756,
+    "f1": 0.3791,
+    "false_positives_per_1000_legit": 7.56,
+    "cost": 11060.0,
+    "episodes": 69,
+    "episode_recall": 0.6232,
+    "amount_saved_rate": 0.8587,
+    "median_fraud_tx_before_first_alert": 1.0,
+    "confusion_matrix": [
+      [
+        73300,
+        558
+      ],
+      [
+        61,
+        189
+      ]
+    ],
+    "recall_by_type": {
+      "behavior": 0.8246,
+      "card_testing": 0.824,
+      "impossible_travel": 0.0,
+      "distributed": 0.907
+    },
+    "episode_recall_by_type": {
+      "distributed": 1.0,
+      "impossible_travel": 0.0,
+      "card_testing": 1.0,
+      "behavior": 0.9333
+    }
+  },
+  "fog_abc_combined": {
+    "precision": 0.2714,
+    "recall": 0.848,
+    "f1": 0.4113,
+    "false_positives_per_1000_legit": 7.7,
+    "cost": 7715.0,
+    "episodes": 69,
+    "episode_recall": 0.9275,
+    "amount_saved_rate": 0.9168,
+    "median_fraud_tx_before_first_alert": 0.0,
+    "confusion_matrix": [
+      [
+        73289,
+        569
+      ],
+      [
+        38,
+        212
+      ]
+    ],
+    "recall_by_type": {
+      "behavior": 0.8246,
+      "card_testing": 0.824,
+      "impossible_travel": 0.84,
+      "distributed": 0.9535
+    },
+    "episode_recall_by_type": {
+      "distributed": 1.0,
+      "impossible_travel": 0.84,
+      "card_testing": 1.0,
+      "behavior": 0.9333
+    }
+  },
+  "fog_b_standalone": {
+    "total_alerts": 39,
+    "true_positives": 28,
+    "false_positives": 11
+  }
+}

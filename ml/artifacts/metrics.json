@@ -1,0 +1,95 @@
+{
+  "features_version": "v2",
+  "threshold (choisi sur validation)": 0.03,
+  "cost_fp": 5.0,
+  "test_prevalence": 0.00337,
+  "random_forest": {
+    "precision": 0.253,
+    "recall": 0.756,
+    "f1": 0.3791,
+    "false_positives_per_1000_legit": 7.56,
+    "cost": 11060.0,
+    "pr_auc": 0.7221,
+    "roc_auc": 0.9748,
+    "episodes": 69,
+    "episode_recall": 0.6232,
+    "amount_saved_rate": 0.8587,
+    "median_fraud_tx_before_first_alert": 1.0,
+    "pr_auc_ci95_card_bootstrap": [
+      0.6497,
+      0.7785
+    ],
+    "confusion_matrix [[TN,FP],[FN,TP]]": [
+      [
+        73300,
+        558
+      ],
+      [
+        61,
+        189
+      ]
+    ],
+    "recall_by_fraud_type (Fog A seul, par transaction)": {
+      "behavior": 0.8246,
+      "card_testing": 0.824,
+      "impossible_travel": 0.0,
+      "distributed": 0.907
+    },
+    "episode_recall_by_type": {
+      "distributed": 1.0,
+      "impossible_travel": 0.0,
+      "card_testing": 1.0,
+      "behavior": 0.9333
+    }
+  },
+  "baseline_rule (écart>2x moyenne OU >=2 tx en 5 min)": {
+    "precision": 0.0879,
+    "recall": 0.624,
+    "f1": 0.1542,
+    "false_positives_per_1000_legit": 21.91,
+    "cost": 20340.0,
+    "episodes": 69,
+    "episode_recall": 0.6377,
+    "amount_saved_rate": 0.837,
+    "median_fraud_tx_before_first_alert": 2.0
+  },
+  "baseline_tree_depth3": {
+    "precision": 0.9252,
+    "recall": 0.544,
+    "f1": 0.6851,
+    "false_positives_per_1000_legit": 0.15,
+    "cost": 24145.0,
+    "pr_auc": 0.5308,
+    "roc_auc": 0.768,
+    "episodes": 69,
+    "episode_recall": 0.5797,
+    "amount_saved_rate": 0.6188,
+    "median_fraud_tx_before_first_alert": 2.0,
+    "threshold": 0.01
+  },
+  "baseline_logreg": {
+    "precision": 0.3306,
+    "recall": 0.656,
+    "f1": 0.4397,
+    "false_positives_per_1000_legit": 4.5,
+    "cost": 15950.0,
+    "pr_auc": 0.6475,
+    "roc_auc": 0.9428,
+    "episodes": 69,
+    "episode_recall": 0.6232,
+    "amount_saved_rate": 0.7558,
+    "median_fraud_tx_before_first_alert": 1.0,
+    "threshold": 0.05
+  },
+  "permutation_importance (baisse de PR-AUC)": {
+    "transactions_last_5min": 0.0908,
+    "amount": 0.0654,
+    "time_since_previous": 0.0558,
+    "transactions_last_30min": 0.0528,
+    "amount_deviation": 0.0435,
+    "hour_of_day": 0.0335,
+    "transactions_last_24h": 0.0114,
+    "max_amount_7d": 0.0073,
+    "average_amount": 0.0034
+  }
+}
